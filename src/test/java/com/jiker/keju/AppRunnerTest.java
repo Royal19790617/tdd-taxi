@@ -16,7 +16,7 @@ public class AppRunnerTest {
     public void readFile_test() {
         AppRunner appRunner = new AppRunner();
         try {
-            Assert.assertEquals("收费6元\\r\\n收费7元\\r\\n收费13元\\r\\n收费7元\\r\\n",appRunner.readFile(new File("src/main/resources/testData.txt")));
+            Assert.assertEquals("收费6元\r\n收费7元\r\n收费13元\r\n收费7元\r\n",appRunner.readFile(new File("src/main/resources/testData.txt")));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -25,7 +25,7 @@ public class AppRunnerTest {
     @Test
     public void getReciept_test() {
         AppRunner appRunner = new AppRunner();
-        Assert.assertEquals("收费6元\\r\\n",appRunner.getReceipt("1     0"));
+        Assert.assertEquals("收费6元\r\n",appRunner.getReceipt("1     0"));
     }
 
 }
