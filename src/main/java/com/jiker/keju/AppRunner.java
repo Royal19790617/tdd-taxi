@@ -3,7 +3,6 @@ package com.jiker.keju;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.util.regex.Pattern;
 
 public class AppRunner {
@@ -34,7 +33,7 @@ public class AppRunner {
     private String getReceipt(String oneLine) {
         String[] str = oneLine.split("\\s+");
         int fee = new CalculateFee().calculate(Integer.valueOf(str[0]),Integer.valueOf(str[1]));
-        return new StringBuffer("").append("收费").append(fee).append("元\r\n").toString();
+        return new StringBuffer("").append("收费").append(fee).append("元\n").toString();
     }
 
 }
