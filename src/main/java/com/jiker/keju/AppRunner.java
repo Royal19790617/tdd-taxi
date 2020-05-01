@@ -30,10 +30,10 @@ public class AppRunner {
         return p.matcher(str).replaceAll(" ").trim();
     }
 
-    private String getReceipt(String oneLine) {
+    public String getReceipt(String oneLine) {
         String[] str = oneLine.split("\\s+");
         int fee = new CalculateFee().calculate(Integer.valueOf(str[0]),Integer.valueOf(str[1]));
-        return new StringBuffer("").append("收费").append(fee).append("元\\n").toString();
+        return new StringBuffer("").append("收费").append(fee).append("元\\r\\n").toString();
     }
 
 }

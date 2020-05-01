@@ -21,7 +21,6 @@ public class CalculateFee {
         BigDecimal elapsedFee = new BigDecimal(new Elapsed().charging(elapsed));
         //计算总额
         fee = startFee.add(nonStartFee).add(overFee).add(elapsedFee).floatValue();
-        System.out.println(fee);
         return Math.round(fee);
     }
 }
